@@ -54,6 +54,44 @@
             </a>
         </section>
 
+        <section id="featured" class="section padding-y fade-in">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">Featured System</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-content">
+                        <div class="featured-badge">Featured Engineering System</div>
+                        <h3 class="featured-title">Drone Control System v3</h3>
+                        <p class="featured-desc">Full-stack teleoperation platform enabling over-the-internet drone control with real-time video streaming and telemetry.</p>
+                        <div class="featured-buttons">
+                            <span class="btn btn-github private">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M12 2v10"></path></svg>
+                                <span>Private Repository</span>
+                            </span>
+                            <a href="#" class="btn btn-secondary">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                                <span>View Architecture</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="featured-visual">
+                        <div class="featured-arch">
+                            <div class="arch-header">System Architecture</div>
+                            <ul>
+                                <li>Android transmitter captures video + GPS</li>
+                                <li>Video streamed over UDP to Python Ground Control Station</li>
+                                <li>Joystick commands sent back over network</li>
+                                <li>Commands forwarded via Bluetooth to ESP32</li>
+                                <li>ESP32 converts signals to PWM for servos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="projects" class="section padding-y fade-in">
             <div class="section-container">
                 <div class="section-header">
