@@ -637,54 +637,105 @@ a:hover {
     box-shadow: none;
 }
 
-/* Skills Section */
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
-}
-
-.skill-category {
+/* Team Capabilities Section */
+.comparison-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    position: relative;
     background: transparent;
     border: 1px solid var(--border-color);
     border-radius: 12px;
-    padding: 2.5rem;
-    transition: border-color 0.3s ease, background 0.3s ease;
+    padding: 3rem;
+    transition: border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
-.skill-category:hover {
+.comparison-grid:hover {
     border-color: rgba(220, 220, 220, 0.15);
     background: var(--secondary-bg);
+    box-shadow: 0 10px 30px var(--glow-color);
 }
 
-.skill-category h3 {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    font-family: 'JetBrains Mono', monospace;
+@media (min-width: 769px) {
+    .comparison-grid {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 0;
+    }
+}
+
+.comparison-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 769px) {
+    .comparison-panel:first-child {
+        padding-right: 3rem;
+    }
+    
+    .comparison-panel:last-child {
+        padding-left: 3rem;
+    }
+}
+
+.comparison-name {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
     letter-spacing: -0.01em;
 }
 
-.tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-}
-
-.skill-tag {
-    display: inline-block;
-    padding: 0.4rem 0.8rem;
-    background: var(--primary-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    font-size: 0.8rem;
+.comparison-role {
     font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+    opacity: 0.8;
 }
 
-.skill-category:hover .skill-tag {
-    border-color: rgba(220, 220, 220, 0.2);
+.comparison-skills {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.comparison-skills li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.comparison-skills li:hover {
     color: var(--text-primary);
+    transform: translateX(5px);
+}
+
+.comparison-skills svg {
+    color: var(--accent);
+    flex-shrink: 0;
+}
+
+.comparison-divider {
+    display: block;
+    height: 1px;
+    background: var(--border-color);
+    margin: 0;
+}
+
+@media (min-width: 769px) {
+    .comparison-divider {
+        width: 1px;
+        height: auto;
+        background: var(--border-color);
+    }
 }
 
 /* Contact Section */
